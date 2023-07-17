@@ -7,7 +7,7 @@ import {
     postCiudad,
     actualizarCiudad,
     deleteCiudad
-} from "./conectionOwnApi";
+} from "./conectionOwnApi.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     getDepartamento().then(() => {

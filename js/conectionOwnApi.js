@@ -1,5 +1,5 @@
-import mostrarRuta from "./mostrarRuta.js";
-import mostrarPunto from "./mostrarPunto.js";
+import mostrarRuta from "./mostrarDepartamento.js";
+import mostrarPunto from "./mostrarCiudad.js";
 
 const URL = "http://localhost:3000";
 const header = new Headers({ "Content-Type": "application/json" });

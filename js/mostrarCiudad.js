@@ -2,17 +2,20 @@ export default function mostrarCiudad(ciudades, departamentos) {
     let tbodyPuntos = document.getElementById("tbodyPuntos");
     tbodyPuntos.innerHTML = "";
 
-    puntos.forEach((ciudad) => {
+    ciudades.forEach((ciudad) => {
         let tr = document.createElement("tr");
         tr.setAttribute("id", `${ciudad.id}`);
         tr.setAttribute("class", "tr");
         tr.innerHTML = `
         <td>${ciudad.id}</td>
         <td>${ciudad.nomCiudad}</td>
-        <td>${getRutaNombre(punto.rutaId, rutas)}</td>
+        <td>${getDepartamentoName(ciudad.departamentoId, departamentos)}</td>
+        <td>${ciudad.imagen}</td>
+        <td>${ciudad.id}</td>
+        <td>clima</td>
         <td>
-        <button type="submit" data-accion="EliminarPunto" class="btn btn-danger py-1 me-3"><img src="../img/icons/trash3-fill.svg" alt=""></button>
-        <button type="button" data-bs-toggle="modal" data-bs-target="#modalModificarPunto" data-accion="ActualizarPunto" class="btn btn-warning py-1"><img src='../img/icons/pencil-square.svg'></button>
+            <button type="submit" data-accion="EliminarPunto" class="btn btn-danger py-1 me-3"><img src="../img/icons/trash3-fill.svg" alt=""></button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalModificarPunto" data-accion="ActualizarPunto" class="btn btn-warning py-1"><img src='../img/icons/pencil-square.svg'></button>
         </td>
         `;
 
@@ -20,7 +23,7 @@ export default function mostrarCiudad(ciudades, departamentos) {
     });
 }
 
-function getRutaNombre(rutaId, rutas) {
-    const ruta = rutas.find((ruta) => ruta.id === rutaId);
-    return ruta ? ruta.ruta : "Ruta no encontrada";
+function getDepartamentoName(departamentosId, departamentos) {
+    const departamento = departamentos.find((ruta) => ruta.id === departamentosId);
+    return departamento ? departamento.nomDepartamento : "Departamento no encontrado";
 }
