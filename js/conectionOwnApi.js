@@ -1,12 +1,12 @@
-import mostrarRuta from "./mostrarDepartamento.js";
-import mostrarPunto from "./mostrarCiudad.js";
+import mostrarDepartamento from "./mostrarDepartamento.js";
+import mostrarCiudad from "./mostrarCiudad.js";
 
 const URL = "http://localhost:3000";
 const header = new Headers({ "Content-Type": "application/json" });
 
 export async function getDepartamento() {
     let data = await (await fetch(`${URL}/Departamentos`)).json();
-    mostrarRuta(data);
+    mostrarDepartamento(data);
 }
 
 export async function postDepartamento(data) {
@@ -41,9 +41,9 @@ export async function deleteDepartamento(tr, id) {
     let del = await (await fetch(`${URL}/Departamentos/${id}`, config)).json();
 }
 export async function getCiudad() {
-    let puntos = await (await fetch(`${URL}/Ciudades`)).json();
-    let rutas = await (await fetch(`${URL}/Departamentos`)).json();
-    mostrarPunto(puntos, rutas);
+    let ciudades = await (await fetch(`${URL}/Ciudades`)).json();
+    let departamentos = await (await fetch(`${URL}/Departamentos`)).json();
+    mostrarCiudad(ciudades, departamentos);
 
     const selectRutas = document.getElementById("rutaId");
     const selectRutasModal = document.getElementById("rutaIdPunto");
