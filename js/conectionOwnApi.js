@@ -48,7 +48,7 @@ export async function getCiudad() {
         option.textContent = departamento.nomDepartamento;
         selectDepartamentos.appendChild(option);
         const optionModal = document.createElement("option");
-        optionModal.value = departamento.id;
+        optionModal.setAttribute =("value", `${departamento.id}`); 
         optionModal.textContent = departamento.nomDepartamento;
         selectDepartamentosModal.appendChild(optionModal);
     });

@@ -1,8 +1,8 @@
 {
     "Departamentos": [
         {
-            "id": 1,
-            "nomDepartamento": "Santander"
+            "nomDepartamento": "S   antander",
+            "id": 1
         },
         {
             "id": 2,
@@ -23,30 +23,10 @@
     ],
     "Ciudades": [
         {
-            "id": 1,
-            "nomCiudad": "Bucaramanga",
-            "departamentoId": 1,
-            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Flag_of_Bucaramanga_%28Santander%29.svg/2560px-Flag_of_Bucaramanga_%28Santander%29.svg.png",
-            "coordenadas": {
-                "lat": 4,
-                "lon": -72
-            }
-        },
-        {
             "id": 2,
             "nomCiudad": "Barrancabermeja",
             "departamentoId": 1,
             "imagen": "https://www.comprarbanderas.es/images/banderas/400/21386-barrancabermeja-con-escudo_400px.jpg",
-            "coordenadas": {
-                "lat": 4,
-                "lon": -72
-            }
-        },
-        {
-            "id": 3,
-            "nomCiudad": "Bogotá",
-            "departamentoId": 2,
-            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Bogot%C3%A1.svg/200px-Flag_of_Bogot%C3%A1.svg.png",
             "coordenadas": {
                 "lat": 4,
                 "lon": -72

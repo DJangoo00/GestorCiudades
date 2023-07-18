@@ -10,7 +10,7 @@ async function fetchClima(ciudad) {
 async function displayData(ciudad) {
     try {
         const data = await fetchClima(ciudad);
-        return `<div class="card-body">
+        return `<div>
                 <p>Estado: ${data.weather[0].main}</p>
                 <p>Descripcion: ${data.weather[0].description}</p>
             </div>
@@ -19,3 +19,4 @@ async function displayData(ciudad) {
         console.error(error);
     }
 }
+export default displayData
