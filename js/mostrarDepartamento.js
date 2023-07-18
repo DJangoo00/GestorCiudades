@@ -1,4 +1,4 @@
-export default function mostrarRuta(data) {
+export default function mostrarDepartamento(data) {
     let tbodyDepartamentos = document.getElementById("tbodyDepartamentos");
     tbodyDepartamentos.innerHTML = "";
     data.forEach((departamento) => {

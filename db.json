@@ -9,8 +9,16 @@
             "nomDepartamento": "Cundinamarca"
         },
         {
-            "id": "3",
-            "nomDepartamento": "fdsgsg"
+            "nomDepartamento": "Cesar",
+            "id": 3
+        },
+        {
+            "nomDepartamento": "Magdalena",
+            "id": 4
+        },
+        {
+            "nomDepartamento": "Atlantico",
+            "id": 5
         }
     ],
     "Ciudades": [
@@ -18,7 +26,7 @@
             "id": 1,
             "nomCiudad": "Bucaramanga",
             "departamentoId": 1,
-            "imagen": "https://colombia.com/bucaramanga.jpg",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Flag_of_Bucaramanga_%28Santander%29.svg/2560px-Flag_of_Bucaramanga_%28Santander%29.svg.png",
             "coordenadas": {
                 "lat": 4,
                 "lon": -72
@@ -28,7 +36,7 @@
             "id": 2,
             "nomCiudad": "Barrancabermeja",
             "departamentoId": 1,
-            "imagen": "https://colombia.com/barranca.jpg",
+            "imagen": "https://www.comprarbanderas.es/images/banderas/400/21386-barrancabermeja-con-escudo_400px.jpg",
             "coordenadas": {
                 "lat": 4,
                 "lon": -72
@@ -38,7 +46,7 @@
             "id": 3,
             "nomCiudad": "Bogotá",
             "departamentoId": 2,
-            "imagen": "https://colombia.com/bogota.jpg",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Bogot%C3%A1.svg/200px-Flag_of_Bogot%C3%A1.svg.png",
             "coordenadas": {
                 "lat": 4,
                 "lon": -72
@@ -48,7 +56,17 @@
             "id": 4,
             "nomCiudad": "Cajicá",
             "departamentoId": 2,
-            "imagen": "https://colombia.com/cajica.jpg",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Flag_of_Cajic%C3%A1_%28Cundinamarca%29.svg/2560px-Flag_of_Cajic%C3%A1_%28Cundinamarca%29.svg.png",
+            "coordenadas": {
+                "lat": 4,
+                "lon": -72
+            }
+        },
+        {
+            "id": 5,
+            "nomCiudad": "Floridablanca",
+            "departamentoId": 1,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Floridablanca_%28Santander%29.svg/2560px-Flag_of_Floridablanca_%28Santander%29.svg.png",
             "coordenadas": {
                 "lat": 4,
                 "lon": -72

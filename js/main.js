@@ -16,75 +16,60 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let form = document.querySelector("#form");
-let tbodyRutas = document.querySelector("#tbodyRutas");
+let tbodyDepartamentos = document.querySelector("#tbodyDepartamentos");
 let formActualizar = document.querySelector("#formActualizar");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
     let data = Object.fromEntries(new FormData(e.target));
-
     let accion = e.submitter.dataset.accion;
-
     if (accion === "Registrar") {
         postDepartamento(data);
     }
 });
 
-tbodyRutas.addEventListener("click", (e) => {
+tbodyDepartamentos.addEventListener("click", (e) => {
     e.preventDefault();
-
     let tr = e.target.closest("tr");
     let id = tr.id;
-
     let accion = e.target.dataset.accion;
-
     if (accion === "Eliminar") {
         deleteDepartamento(tr, id);
         tr.remove();
     } else if (accion === "Actualizar") {
         formActualizar.addEventListener("submit", (e) => {
             e.preventDefault();
-
             let data = Object.fromEntries(new FormData(e.target));
             actualizarDepartamento(data, id);
         });
     }
 });
 
-let formPuntos = document.querySelector("#formPuntos");
-let tbodyPuntos = document.querySelector("#tbodyPuntos");
-let formActualizarPunto = document.querySelector("#formActualizarPunto");
+let formCiudades = document.querySelector("#formCiudades");
+let tbodyCiudades = document.querySelector("#tbodyCiudades");
+let formActualizarCiudad = document.querySelector("#formActualizarPunto");
 
-formPuntos.addEventListener("submit", (e) => {
+formCiudades.addEventListener("submit", (e) => {
     e.preventDefault();
-
     let data = Object.fromEntries(new FormData(e.target));
-
-    data.rutaId = parseInt(data.rutaId, 10);
-
+    data.departamentoId = parseInt(data.departamentoId, 10);
     let accion = e.submitter.dataset.accion;
-
     if (accion === "RegistrarPunto") {
         postCiudad(data);
     }
 });
 
-tbodyPuntos.addEventListener("click", (e) => {
+tbodyCiudades.addEventListener("click", (e) => {
     e.preventDefault();
-
     let tr = e.target.closest("tr");
     let id = tr.id;
-
     let accion = e.target.dataset.accion;
-
     if (accion === "EliminarPunto") {
         deleteCiudad(tr, id);
         tr.remove();
     } else if (accion === "ActualizarPunto") {
-        formActualizarPunto.addEventListener("submit", (e) => {
+        formActualizarCiudad.addEventListener("submit", (e) => {
             e.preventDefault();
-
             let data = Object.fromEntries(new FormData(e.target));
             actualizarCiudad(data, id);
         });
